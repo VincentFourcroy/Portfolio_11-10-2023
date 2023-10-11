@@ -8,7 +8,7 @@
 }
 
 
-/* ===== Colours ===== */
+/* ===== Variables ===== */
 :root{
     --body-color: var(--light);
     --nav-color:var(--primary);
@@ -29,6 +29,7 @@
 
 }
 
+/* ===== General Styling ===== */
 /* quelques exemples d'utilisation des varibales en css */
 body{
     background-color: var(--light);
@@ -39,4 +40,22 @@ body{
 /* Le padding des bouton est géré pas besoin de le rajouter dans tes boutons tu n'as qu'à changer ici si besoin */
 button{
     padding: var(--padding-btn);
+}
+
+/* ===== Navbar ===== */
+
+
+
+
+
+/* ===== Footer ===== */
+
+
+/* ===== Banner ===== */
+
+
+/* ===== Media Queries ===== */
+/* Laptop Desktop */
+@media screen and (min-width: 62rem) {
+    
 }
