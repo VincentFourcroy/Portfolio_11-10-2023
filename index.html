@@ -7,10 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Liens pour les font google -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Hair Salon</title>
 </head>
 
@@ -18,42 +16,43 @@
 
     <nav>
         <div class="nav-bar">
-            <i class='bx bx-menu sidebarOpen' ></i>
-            <span class="logo navLogo"><a href="#">Hair Salon</a></span>
-
+            
+            <div class="logo navBranding"><a href="#">Hair Salon</a></div>
+            <div class="nav-btn">
+                <ion-icon class="burger" name="reorder-three-outline" id="burger"></ion-icon>
+                <ion-icon class="btn-close" name="close-outline"></ion-icon>
+            </div>
+            
             <div class="menu">
-                <div class="logo-toggle">
-                    <span class="logo"><a href="#">Hair Salon</a></span>
-                    <i class='bx bx-x siderbarClose'></i>
-                </div>
-
+                
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">About us</a></li>
+                    <li class="nav-item"><a href="#">Services</a></li>
+                    <li class="nav-item"><a href="#">Portfolio</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
                 </ul>
             </div>
 
             <div class="searchBox-container">
 
                 <div class="searchBox">
-                   <div class="searchToggle">
-                    <i class='bx bx-x cancel'></i>
-                    <i class='bx bx-search search'></i>
-                   </div>
+                   <!-- <div class="searchToggle">
+                    <ion-icon class="searchToggle" name="search-outline"></ion-icon>
+                   </div> -->
 
-                    <div class="search-field">
-                        <input type="text" placeholder="Search...">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </div>
+                    <!-- <div class="search-field"> -->
+                        <input class="search-bar" type="text" placeholder="Search...">
+                        <ion-icon class="search-toggle" name="search-outline"></ion-icon>
+                        <!-- <ion-icon class="cancel" name="close-outline"></ion-icon> -->
+
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
     </nav>
-
-    <!--Bloc Read More 1 kljl -->
+    <main>
+         <!--Bloc Read More 1 kljl -->
     <div class="readmore1_container">
         <div class="readmore1_1">
             <h1 id="home">HAIR SALON</h1>
@@ -141,11 +140,142 @@
             <img src="images/vincent/pexels-vinicius-wiesehofer-1130626.jpg" alt="picture of a woman">
         </div>
     </div>
+        <section id="portfolio">
 
-    <!-- Lien script ion icon pour nous permettre d'afficher leurs icones -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        <h2>Portfolio</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="assets/img/diapo1.PNG" alt="">
+                <div class="banner">
+                    <span class="banner-text">
+                        <p>Augustine</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestiae debitis magnam quo corporis.</p>
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/card-img1.jpg" alt="">
+                <div class="banner">
+                    <span class="banner-text">
+                        <p>Amandine</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestiae debitis magnam quo corporis.</p>
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/card-img1.jpg" alt="">
+                <div class="banner">
+                    <span class="banner-text">
+                        <p>Anais</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta molestiae debitis magnam quo corporis.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+        </section>
+<section id="team">
+        <h2>Our Team</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="assets/img/diapo1.PNG" alt="">
+                <div class="banner">
+                    <span class="banner-text team-legend">
+                        <p>Jackie</p>
+                        <p>Make up Artist</p>
+                    </span>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/card-img1.jpg" alt="">
+                <div class="banner">
+                    <span class="banner-text team-legend">
+                        <p>Antoinette</p>
+                        <p>Hair Dresser</p>
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/img/card-img1.jpg" alt="">
+                <div class="banner">
+                    <span class="banner-text team-legend">
+                        <p>Brigitte</p>
+                        <p>Hair Stylist</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
     
+
+    
+
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-branding">
+                <p class="footer-logo logo">HAIRSALON</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur consequatur expedita blanditiis aperiam illo eos quae non at omnis aspernatur suscipit quisquam similique nostrum perferendis quia ratione sint, sapiente quam.</p>
+            </div>
+
+            <div class="footer-services">
+                <p class="title">Services</p>
+                <ul class="footer-list">
+                    <li class="footer-list-item">Commercial</li>
+                    <li class="footer-list-item">House</li>
+                    <li class="footer-list-item">Office</li>
+                    <li class="footer-list-item">Residential</li>
+                    <li class="footer-list-item">Tower</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <p class="title">Links</p>
+                <ul class="footer-list">
+                    <li class="footer-list-item">Commercial</li>
+                    <li class="footer-list-item">House</li>
+                    <li class="footer-list-item">Office</li>
+                    <li class="footer-list-item">Residential</li>
+                    <li class="footer-list-item">Tower</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <p class="title">Social</p>
+                <ul class="footer-list">
+                    <li class="footer-list-item">Commercial</li>
+                    <li class="footer-list-item">House</li>
+                    <li class="footer-list-item">Office</li>
+                    <li class="footer-list-item">Residential</li>
+                    <li class="footer-list-item">Tower</li>
+                </ul>
+            </div>
+            
+            
+            <div class="footer-contact">
+                <p class="title">Contact Us</p>
+                <p>adresse</p>
+                <p>Email</p>
+                <div class="footer-icons">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <ion-icon name="logo-skype"></ion-icon>
+                </div>
+            
+            </div>
+            <div class="footer-credits">
+                Copyright &copy; Shelsin & Madina Dvlpr.
+            </div>
+        </div>
+    </footer>
+    
+
+<!-- Lien script ion icon pour nous permettre d'afficher leurs icones -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 
 </html>
