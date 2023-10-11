@@ -44,7 +44,7 @@ button{
 }
 .logo{
     font-family: var(--ff-headings);
-    font-size: var(--fs-regular);
+    font-size: var(--fs-medium);
     font-weight: 700;
 }
 /* ===== Navbar ===== */
@@ -72,6 +72,7 @@ nav{
     margin-left: 1rem;
     font-size: 1.5rem;
 }
+
 .nav-links{
     position: absolute;
     right: 0;
@@ -108,6 +109,7 @@ nav .nav-bar .nav-links li a{
 
 .nav-links{
     position: absolute;
+    z-index: 2;
 }
 .searchBox-container{
     display: flex;
@@ -124,6 +126,68 @@ nav .nav-bar .nav-links li a{
 /* ===== Footer ===== */
 footer{
     display: flex;
+    background-color: var(--primary);
+    color: var(--light);
+    margin-top: 2rem;
+    padding: var(--padding);
+    font-family: var(--ff-text);
+}
+footer > *{
+    flex: 1 1 0;
+}
+/* La grid du footer en mobile */
+.footer-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: .5rem; 
+    grid-template-areas: 
+        "footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding footer-branding"
+        "footer-services footer-services footer-links footer-links footer-social footer-social footer-contact footer-contact footer-contact footer-contact footer-contact footer-contact"
+        "footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits footer-credits "; 
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    font-size: var(--fs-xs);
+    
+} 
+
+.footer-branding { grid-area: footer-branding; }
+.footer-services { grid-area: footer-services; }
+.footer-links { grid-area: footer-links; }
+.footer-social { grid-area: footer-social; }
+.footer-contact { grid-area: footer-contact; }
+.footer-credits{grid-area: footer-credits;}
+.footer-branding, 
+.footer-credits{
+    text-align: center;
+    height: 2rem;
+}
+.footer-branding .logo{
+    font-size: var(--fs-large);
+}
+
+
+.footer-grid ion-icon{
+    font-size: var(--fs-medium);
+}
+.footer-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--padding);
+    z-index: 0;
+}
+
+footer ul{
+    list-style-type: none;
+}
+footer p.title{
+    font-size: var(--fs-regular);
+}
+.footer-contact{
+    text-align: center;
 }
 
 /* ===== Banner ===== */
@@ -159,6 +223,11 @@ footer{
     .searchBox-container{
         min-width: 25vw;
         padding-left: var(--padding);
+    }
+    .footer-grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap:1rem
     }
     
 }
