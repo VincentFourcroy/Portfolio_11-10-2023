@@ -13,6 +13,7 @@
     --body-color: var(--light);
     --nav-color:var(--primary);
     --primary:#050505;
+    --grey:#F6F6F6;
     --light:#ffffff;
     --ff-headings: 'Montserrat', sans-serif;
     --ff-text: 'Poppins', sans-serif;
@@ -243,29 +244,30 @@ footer p.title{
     min-height: 80vh;
     margin-bottom: 3rem;
 }
-
+section#team{
+    background-color: var(--grey);
+}
 
 .card-container{
     display: flex;
     flex-direction: column;
-    flex: 1 1 0%;
     padding: 3rem;
-    gap: 8.5rem;
+    /* gap: 8.5rem; */
 
 }
 
 .card-container img{
-    /* width: 67vw; */
+    width: 75vw;
     object-fit: cover;
 }
 .card{
     margin-bottom: 2rem;
+    max-width: 75vw;
 }
 .banner{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 30vw;
+    width: 100%;
     border-radius: var(--b-radius-banner);
     background: #FFF;
     box-shadow: var(--box-shadow);
@@ -329,7 +331,7 @@ footer p.title{
         width: 30vw;
     }
     .card-container{
-        flex: 1 1 0%;
+        flex-direction: row;
         padding: 3rem;
         gap: 1.5rem;
     
