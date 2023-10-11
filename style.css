@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;
+}
+
+
+/* ===== Colours ===== */
+:root{
+    --body-color: var(--light);
+    --nav-color:var(--primary);
+    --primary:#010718;
+    --light:#ffffff;
+    --ff-headings: 'Montserrat', sans-serif;
+    --ff-text: 'Poppins', sans-serif;
+    --box-shadow: 1px 6px 15px -5px #484848;
+    --padding-btn: 1rem 2rem;
+    /* Permet d'avoir une première approche des font responsives les dimension seront peut être à adapter à la fin
+    Clamp (taille minimum, taille idéale souhaitée, taille max) le browser va ensuite adapter la chose en fonction des devices etc*/
+    --fs-xs: clamp(.375rem, 1vw + 1rem, .75rem);
+    --fs-regular: clamp(0.5rem, 1.7vw + 1rem, 1rem);
+    --fs-medium: clamp(0.7rem, 2vw + 1rem, 1.5rem);
+    --fs-large: clamp(1rem, 2.4vw + 1rem, 2rem);
+    --fs-xl: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+
+
+}
+
+/* quelques exemples d'utilisation des varibales en css */
+body{
+    background-color: var(--light);
+    font-family: var(--ff-text);
+    color: var(--primary);
+}
+
+/* Le padding des bouton est géré pas besoin de le rajouter dans tes boutons tu n'as qu'à changer ici si besoin */
+button{
+    padding: var(--padding-btn);
+}
