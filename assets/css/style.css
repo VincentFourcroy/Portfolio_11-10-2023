@@ -206,28 +206,6 @@ footer p.title {
 
 /* Les cartes */
 
-/* .card{
-    
-    margin-bottom: 2rem;
-    padding: var(--padding);
-    height: 55vh;
-    width: 30vw;
-} */
-/* .card-legend{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* width: 100%; */
-/* background: var(--light);
-    box-shadow: var(--box-shadow);
-    position: relative;
-    z-index: 2;
-    bottom: 0;
-    padding: .5rem;
-    font-size: var(--fs-regular);
-    width: 100%; */
-/* } */
-
 .diapo {
   display: flex;
   background-color: var(--grey);
@@ -238,28 +216,23 @@ footer p.title {
 
 #portfolio,
 #team {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   margin-bottom: 3rem;
 }
-section#team {
+section #team {
   background-color: var(--grey);
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  /* gap: 8.5rem; */
 }
 
 .card-container img {
-  width: 75vw;
+  width: 100%;
   object-fit: cover;
 }
-.card {
-  margin-bottom: 2rem;
-  max-width: 75vw;
-}
+
 .banner {
   display: flex;
   align-items: center;
@@ -267,23 +240,32 @@ section#team {
   border-radius: var(--b-radius-banner);
   background: #fff;
   box-shadow: var(--box-shadow);
-  bottom: -25vh;
+  bottom: 2vh;
   padding: 2rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 .team-legend {
   text-align: center;
 }
 
-/* Bloc Read More 1 */
+/* ******Bloc Read More 1******* */
+.readmore2_container,
 .readmore1_container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 3rem;
   background-color: #f2f2f2;
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
+}
+
+.readmore2_2,
+.readmore1_1 {
+  display: flex;
+  flex-direction: column;
 }
 
 .readmore1_1 button {
@@ -299,15 +281,17 @@ section#team {
 }
 
 /*Bloc Read More 2*/
-.readmore2_container {
+/* .readmore2_container {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
   padding: 3rem;
   background-color: #f2f2f2;
-}
+} */
 
 .readmore2_1 img {
   width: 100%;
@@ -337,6 +321,8 @@ section#team {
 .services_icons_container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
 }
@@ -345,8 +331,8 @@ section#team {
 .services_icons_container2,
 .services_icons_container3,
 .services_icons_container4 {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   border-style: solid;
   border-color: #f2f2f2;
   box-shadow: var(--box-shadow);
@@ -358,23 +344,25 @@ section#team {
 /*Bloc What We Do*/
 .what_container1 {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-style: solid;
   border-color: #f2f2f2;
   box-shadow: var(--box-shadow);
+  padding: var(--padding);
+  gap: var(--padding);
 }
-
-.what_card {
+.what_container1 span img {
+  width: 100%;
+}
+/* .what_card {
   width: 50%;
-}
-
+} */
+/* 
 .what_container1 img {
   width: 50%;
-}
+} */
 
 /*Bloc Formulaire*/
 .contactus_container {
@@ -469,22 +457,19 @@ section#team {
         align-items: center; */
     max-height: 10vh;
   }
-  .card {
-    width: 30vw;
+  .card-container .card {
+    width: 25vw;
   }
   .card-container {
     flex-direction: row;
+    justify-content: center;
     padding: 3rem;
     gap: 1.5rem;
   }
   .card-container img {
-    width: 30vw;
+    width: 25vw;
     height: 50vh;
     object-fit: cover;
-  }
-
-  .services_container {
-    flex-direction: row;
   }
 
   .services_icons_container img {
@@ -492,16 +477,97 @@ section#team {
     height: 10rem;
     object-fit: cover;
   }
+  .services_icons_container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
 
   .services_icons_container1,
-.services_icons_container2,
-.services_icons_container3,
-.services_icons_container4 {
+  .services_icons_container2,
+  .services_icons_container3,
+  .services_icons_container4 {
+    /* width: 23.5rem;
+    height: 18rem; */
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services_container {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .readmore1_container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .readmore1_container > * {
+    flex: 1;
+  }
+
+  .readmore1_1 {
+    padding: 4rem;
+    line-height: 2rem;
+  }
+
+  .readmore1_1 p {
+    margin-top: 2rem;
+  }
+
+  h1#home {
+    font-size: 4rem;
+  }
+
+  .readmore1_2 img {
+    height: 250px;
+    width: 18vw;
+  }
+
+  .readmore1_2 {
+    gap: 2rem;
+  }
+  #what {
+    margin-bottom: 2rem;
+    padding: var(--padding);
+  }
+  .what_container1 {
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 23.5rem;
-    height: 18rem;
-    justify-content: space-around;
-}
-
+    /* height: 90%; */
+  }
+  .what_container1 > * {
+    flex: 1;
+    padding: var(--padding);
+  }
+  .what_container1 span img {
+    width: 100%;
+  }
+  .readmore2_container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .contactus_container > *,
+  .readmore2_container > * {
+    flex: 1;
+  }
+  /* .services_icons_container {
+  justify-content: center;
+  flex-direction: row;
+} */
+  #form {
+    height: 100vh;
+  }
+  .contactus_container {
+    padding: 4rem;
+  }
+  .contactus_container img {
+    /* max-height: 60vh; */
+    width: 30vw;
+    object-fit: contain;
+  }
 }
